@@ -6,3 +6,8 @@ Given /^a user with the login "([^"]*)" exists$/ do |login|
   end
   user.save
 end
+
+Given /^that I go to the homepage/ do
+  visit root
+end
+
