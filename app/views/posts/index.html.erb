@@ -1,0 +1,17 @@
+<table class="blog-posts">
+        <%unless @posts.nil?%>
+          <% @posts.each do |post| %>
+            <td>
+              <tr><h2><%= link_to post.title, post %></h2></tr><br/>
+              <tr><%= post.content[0, 500] %></tr>
+            </td>
+          <% end %>
+        <%else%>
+        <tr>
+          <td><i>There are no blog posts yet.</i></td>
+        </tr>
+      <% end %>
+</table>
+
+
+<br />

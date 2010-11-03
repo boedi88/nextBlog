@@ -1,0 +1,26 @@
+div.new-post
+{
+    display: block;
+    float: left;
+}
+
+table.recent
+{
+    width: 900px
+}
+
+tr.recent
+{
+    margin-bottom: 30px;
+}
+
+div.draft-ts
+{
+    font-size: 8pt;
+    display: inline;
+}
+
+table.blog-posts
+{
+    width: 800px;
+}
