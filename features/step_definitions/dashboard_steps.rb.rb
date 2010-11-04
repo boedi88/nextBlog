@@ -1,9 +1,9 @@
-Given /^a user with the login "([^"]*)" exists$/ do |login|
+Given /^a user "([^"]*)" has "([^"]*)" role$/ do |login, role|
   user = User.create do |u|
     u.password = u.password_confirmation = "asdasd"
     u.login = login
     u.email = "admin@gmail.com"
-  end
+    u.role = role
+    end
   user.save
 end
-

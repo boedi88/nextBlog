@@ -16,21 +16,20 @@
 <br />
 <br />
 
-
+<div class="top-navigation">
+<%= link_to 'Blog', posts_path %> |
 <% if !current_user %>
   <%= link_to "Register", new_account_path %> |
-  <%= link_to "Log In", new_user_session_path %> |
+  <%= link_to "Log In", new_user_session_path %>
 <% else %>
-
   <%if current_user.role%>
     <%= link_to 'Dashboard', account_path %> |
-  <%else%>
-    <%= link_to 'Blog', posts_path %> |
   <%end%>
 
   <%= link_to 'My Account', edit_account_path %> |
   <%= link_to "Logout", user_session_path, :method => :delete, :confirm => "Are you sure you want to logout?" %>
 <% end %>
+</div>
 
 <p style="color: green"><%= flash[:notice] %></p>
 

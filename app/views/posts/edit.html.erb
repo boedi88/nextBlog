@@ -1,5 +1,5 @@
-<h1>Editing post</h1>
-
+<h3>Editing post</h3>
+<div class="edit-post">
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
 
@@ -21,6 +21,6 @@
     <%= f.submit 'Update' %>
   </p>
 <% end %>
-
+</div>
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>

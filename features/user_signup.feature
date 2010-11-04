@@ -26,7 +26,7 @@
     And I fill in "Login" with "homer"
     And I fill in "Email" with "homer@simpsons.com"
     And I fill in "Password" with "homer_rocks"
-    And I fill in "Password Confirmation" with "xhomer_rocks"
+    And I fill in "Password confirmation" with "xhomer_rocks"
     When I press "Register"
     Then I should see "Password doesn't match confirmation"
 

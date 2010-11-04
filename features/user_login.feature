@@ -9,12 +9,11 @@ Feature: User login
   Scenario: User login
     Given I go to the homepage
     And I follow "Log In"
-    And I fill in "Login" with "homer"
-    And I fill in "Password" with "simpson312"
+    And I fill in "Login" with "admin"
+    And I fill in "Password" with "asdasd"
     When I press "Submit"
-    Then I should be on the account page
+    Then I should be on the posts page
     And I should see "Login successful!"
     And I should see "Login"
-    And I should see "Email"
-    When I follow "Edit"
+    When I follow "My Account"
     Then I should see "Edit My Account"

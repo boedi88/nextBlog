@@ -3,7 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.login  '/login',  :controller => 'user_sessions', :action => 'destroy'
 
-  map.root :controller => 'user_sessions', :action => 'new'
+  map.root :controller => 'posts', :action => 'index'
 
   map.resource :user_session
 

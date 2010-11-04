@@ -13,6 +13,8 @@ module NavigationHelpers
       '/'
     when /the account page/
       '/account'
+    when /the posts page/
+      '/posts'
     
     # Add more mappings here.
     # Here is a more fancy example:
