@@ -1,6 +1,13 @@
 class PostsController < ApplicationController
    skip_before_filter :require_user
    before_filter :require_admin, :only => [:destroy, :create, :edit, :update]
+     uses_tiny_mce :options => {
+                              :theme => 'advanced',
+                              :theme_advanced_resizing => true,
+                              :theme_advanced_resize_horizontal => false,
+                              :plugins => %w{ table fullscreen }
+                            }
+
   # GET /posts
   # GET /posts.xml
 

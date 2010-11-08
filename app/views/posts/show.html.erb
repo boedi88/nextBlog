@@ -3,7 +3,7 @@
 </p>
 
 <p>
-  <%=h @post.content %>
+  <%= sanitize @post.content %>
 </p>
 
 <%if  !current_user.nil? && current_user.role%>
