@@ -22,3 +22,14 @@ When /^(?:|I )follow "([^"]*)" edit link$/ do |title|
   post = Post.find_by_title(title)
   visit edit_post_path(post)
 end
+
+#And I should see "Cucu post 1" content within "mceEditor"
+Then /^(?:|I )should see "([^"]*)" content within "([^"]*)"$/ do |title, selector|
+  with_scope(selector) do
+    if page.respond_to? :should
+      page.should have_content(Post.find_by_title(title).text)
+    else
+      assert page.has_content?(Post.find_by_title(title).text)
+    end
+  end
+end
