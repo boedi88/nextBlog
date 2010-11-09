@@ -36,7 +36,7 @@ Scenario: New post
     And I fill in "post_title" with "cucuPost"
     And I fill in "post_content" with "Cucumber pr0 automatically created this"
     And I select "publish" from "post_status"
-    And I press "post_submit"
+    And I press "Create"
     Then I should see "Post was successfully created."
     Then I follow "Dashboard"
     And I should see "cucuPost"

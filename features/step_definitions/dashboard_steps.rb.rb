@@ -14,7 +14,9 @@ Given /^a user "([^"]*)" has "([^"]*)" role$/ do |login, role|
 end
 
 Given /^a post "([^"]*)" with status "([^"]*)" exists$/ do |title, status|
-  Post.create(:title => title, :status => status, :content => "This is the content.")
+  Post.create(:title => title,
+    :status => status,
+    :content => "This is the content.")
 end
 
 #And I follow "cucuPost" edit link

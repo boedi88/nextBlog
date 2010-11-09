@@ -1,14 +1,25 @@
-<table class="blog-posts">
+<br/>
+  <table class="blog-posts">
         <%unless @posts.nil?%>
           <% @posts.each do |post| %>
-            <td>
-              <tr><h2 class="post-title-list"><%= link_to post.title, post %></h2></tr><br/>
-              <tr class="post-preview"><%= post.content[0, 500] %>...&nbsp;&nbsp;<%= link_to "read more", post %></tr>
+        <tr>
+            <td class="picture-column" valign="middle">
+              <%if post.photo.exists?%>
+              <br/><br/><br/>
+              <%= image_tag post.photo.url(:thumb)%>
+              <%else%>
+                 
+              <%end%>
             </td>
+            <td>
+              <br/><h2 class="post-title"><%= link_to post.title, post %></h2><br/>
+              <div class="post-preview"><%= post.content[0, 500] %>...&nbsp;&nbsp;<%= link_to "read more", post %></div>
+            </td>
+        </tr>
           <% end %>
         <%else%>
         <tr>
-          <td class="post-preview"><i>There are no blog posts yet.</i></td>
+          <td class="post-preview"> <i>There are no blog posts yet.</i></td>
         </tr>
       <% end %>
 </table>

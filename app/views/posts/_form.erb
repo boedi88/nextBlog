@@ -1,0 +1,24 @@
+<div class="edit-post">
+<% form_for(@post, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content, :class => "mceEditor" %>
+  </p>
+  <p>
+    <%= f.label :status %>
+    <%= f.collection_select :status, Post::STATUSES, :to_s, :to_s,
+       :include_blank => false
+    %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </p>
+<% end %>
+</div>

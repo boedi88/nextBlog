@@ -24,3 +24,10 @@ table.blog-posts
 {
     width: 800px;
 }
+
+td.picture-column
+{
+    display: block;
+    margin-right: 10px;
+    text-align: center;
+}
